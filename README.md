@@ -5,7 +5,7 @@ Project Overview
 This project demonstrates the implementation of the Principle of Least Privilege (PoLP) and Governance Monitoring within an AWS environment. By leveraging AWS IAM, CloudTrail, and S3, I created a secure framework to prevent unauthorized resource modification while ensuring a verifiable audit trail for compliance.
 
 This project aligns with the ISC2 Certified in Cybersecurity (CC) domains:
-- Domain 2: Incident Response, BC, and DR
+- Domain 2: Incident Response
 - Domain 3: Access Control Concepts
 - Domain 4: Network Security
 

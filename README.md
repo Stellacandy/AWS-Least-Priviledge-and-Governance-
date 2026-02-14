@@ -21,17 +21,16 @@ The architecture focuses on three core pillars of security: Identification, Prot
 Technical Implementation
 
 1. Hardening Storage (Amazon S3)
-- Created a private bucket to house security logs.
+- I created a private S3 bucket to house security logs.
 - Security Control: Enabled "Block all public access" to prevent data leakage.
 - Integrity Control: Enabled Bucket Versioning to protect logs from accidental or malicious deletion.
 
 2. Implementation of Logging (AWS CloudTrail)
-- Configured a management trail to monitor account-wide activity.
-- Linked the trail to the secure S3 bucket.
+- I configured an event management trail to monitor account-wide activity, then I linked the trail to the secure S3 bucket.
 - Verified that all "Write" and "Read" events are captured for forensic readiness.
 
 3. Enforcing Least Privilege (IAM)
-- Created a custom IAM policy, Auditor-Read-Only, designed for a "Junior Auditor" persona. The policy allows metadata visibility but explicitly denies destructive actions.
+- I created a custom IAM policy, "Auditor-Read-Only", designed for a "Junior Auditor" persona. The policy allows metadata visibility but explicitly denies destructive actions.
 
 Policy Snippet (JSON):
 JSON{
@@ -64,7 +63,7 @@ JSON{
 
 
 4. Security Validation (The Test)
-- To verify the effectiveness of the controls, I performed a "Breach Simulation"
+- To verify the effectiveness of the controls, I performed a "Breach Simulation" by attempting to delete the secure S3 bucket using the IAM user I created.
 - Assumption of Identity: Logged in as the junior-auditor user.
 - Unauthorized Action: Attempted to delete the production log bucket via the S3 Console.
 - Result: The action was Blocked by the IAM engine (Access Denied).

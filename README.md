@@ -1,5 +1,5 @@
 
-AWS Cloud Security: Implementing Identity Governance & Automated Auditing in AWS
+AWS Cloud Security: Implementing Identity Governance & Automated Auditing logging in AWS
 
 Project Overview
 This project demonstrates the implementation of the Principle of Least Privilege (PoLP) and Governance Monitoring within an AWS environment. By leveraging AWS IAM, CloudTrail, and S3, I created a secure framework to prevent unauthorized resource modification while ensuring a verifiable audit trail for compliance.
